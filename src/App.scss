@@ -3,3 +3,16 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+:root {
+    --ui-primary: #3066be;
+    --ui-secondary: #ab87ff;
+    --ui-white: #ffffff;
+    --ui-black: #000000;
+}
+
+input, button, textarea {
+  outline: none;
+  border: none;
+  resize: none;
+}
