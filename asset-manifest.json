@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/sed-frontend/static/css/main.0d923f70.css",
+    "main.js": "/sed-frontend/static/js/main.9720c91b.js",
+    "static/js/787.a8f0fd1b.chunk.js": "/sed-frontend/static/js/787.a8f0fd1b.chunk.js",
+    "static/media/boxicons.svg": "/sed-frontend/static/media/boxicons.9e2b21b135bc7d4c803f.svg",
+    "static/media/boxicons.eot": "/sed-frontend/static/media/boxicons.65a8ce52fc5427e8f94d.eot",
+    "static/media/boxicons.woff": "/sed-frontend/static/media/boxicons.d12afc36557395143e4b.woff",
+    "static/media/boxicons.ttf": "/sed-frontend/static/media/boxicons.db9ddb1898dbd76badca.ttf",
+    "static/media/boxicons.woff2": "/sed-frontend/static/media/boxicons.df635aaf04cd75132f62.woff2",
+    "index.html": "/sed-frontend/index.html",
+    "main.0d923f70.css.map": "/sed-frontend/static/css/main.0d923f70.css.map",
+    "main.9720c91b.js.map": "/sed-frontend/static/js/main.9720c91b.js.map",
+    "787.a8f0fd1b.chunk.js.map": "/sed-frontend/static/js/787.a8f0fd1b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0d923f70.css",
+    "static/js/main.9720c91b.js"
+  ]
+}
