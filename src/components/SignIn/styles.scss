@@ -51,8 +51,9 @@
                 position: absolute;
                 top: 7px;
                 left: 12px;
+                font-size: 15px;
                 font-style: italic;
-                transition: all 0.3s ease-in;
+                transition: all 0.3s ease;
                 
                 &.active {
                     font-size: 13px;
