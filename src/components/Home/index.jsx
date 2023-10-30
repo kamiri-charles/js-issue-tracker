@@ -2,7 +2,7 @@ import {useState} from 'react';
 import './styles.scss';
 
 const Home = () => {
-    let [user, setUser] = useState({name: 'Default'});
+    let [user, setUser] = useState({name: 'default'});
     return (
         <div className='home'>
             Welcome, {user.name}!

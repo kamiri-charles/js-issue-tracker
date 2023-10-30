@@ -1,6 +1,6 @@
 {
   "name": "sed-frontend",
-  "homepage": "https://kamiri-charles.github.io/sed-frontend",
+  "homepage": "https://kamiri-charles.github.io/js-issue-tracker",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

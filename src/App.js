@@ -7,7 +7,7 @@ import './App.scss';
 function App() {
   return (
     <div className='App'>
-      <Router>
+      <Router basename='js-issue-tracker'>
         <Routes>
           <Route path='/' element={ <Home />} />
           <Route path='/sign-in' element={ <SignIn />} />
