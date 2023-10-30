@@ -4,6 +4,21 @@
     align-items: center;
     height: 100vh;
     background-color: var(--ui-black);
+
+    .title {
+        position: absolute;
+        text-align: center;
+        top: 40px;
+        left: 40px;
+        font-family: 'Edu NSW ACT Foundation', cursive;
+        font-size: 30px;
+        font-weight: 600;
+        color: white;
+
+        .group {
+            font-size: 20px;
+        }
+    }
     
     form {
         display: flex;

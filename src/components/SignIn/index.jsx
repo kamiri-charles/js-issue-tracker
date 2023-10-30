@@ -12,6 +12,11 @@ const SignIn = () => {
     return (
       <div className='sign-in'>
 
+        <div className="title">
+          <div className="name">JS Issue Tracker</div>
+          <div className="group">Group D Project</div>
+        </div>
+
         <form>
           <div className='form-title'>Sign in to your account.</div>
           <label>
