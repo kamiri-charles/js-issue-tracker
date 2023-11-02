@@ -91,6 +91,13 @@
                 color: var(--ui-white);
             }
         }
+
+        .error {
+            color: red;
+            font-family: 'EDU NSW ACT Foundation', cursive;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
         
         button {
             width: 120px;
