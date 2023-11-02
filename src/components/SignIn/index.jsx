@@ -22,7 +22,10 @@ const SignIn = () => {
       })
         .then((response) => response.json())
         .then((data) => {
-          localStorage.setItem("jit_user_data", data);
+          //localStorage.setItem("jit_user_data", JSON.parse(data));
+          console.log(typeof(data))
+          localStorage.setItem('jit_user_data', JSON.stringify(data));
+          console.log(localStorage.getItem('jit_user_data'));
           setLoading(false);
           nav("/dashboard");
         })

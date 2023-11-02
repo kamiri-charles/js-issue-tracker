@@ -7,15 +7,15 @@
     .title {
         position: absolute;
         text-align: center;
-        top: 40px;
+        top: 20px;
         left: 40px;
         font-family: 'Edu NSW ACT Foundation', cursive;
-        font-size: 30px;
+        font-size: 1.5rem;
         font-weight: 600;
         color: white;
 
         .group {
-            font-size: 20px;
+            font-size: 1rem;
         }
     }
     
@@ -28,7 +28,7 @@
         padding: 20px;
         width: 400px;
         min-height: 500px;
-        margin-top: 70px;
+        margin-top: 100px;
         z-index: 99;
         
         .form-title {
@@ -109,4 +109,23 @@
             cursor: pointer;
         }
     }
+}
+
+@media screen and (max-width: 480px) {
+  .sign-in {
+    .title {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    form {
+        width: 100vw;
+        height: 100vh;
+
+        button {
+            width: 150px;
+            padding-block: 20px;
+        }
+    }
+  }
 }
