@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Header from '../Header';
 import './styles.scss';
 
 const Dashboard = () => {
@@ -18,7 +19,8 @@ const Dashboard = () => {
     }, [nav]);
 
     return (
-        <div className='home'>
+        <div className='dashboard'>
+            <Header />
             Welcome, {userData?.username}!
         </div>
     )
