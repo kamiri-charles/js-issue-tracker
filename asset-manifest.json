@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/js-issue-tracker/static/css/main.e5f3d7fd.css",
-    "main.js": "/js-issue-tracker/static/js/main.36301075.js",
+    "main.css": "/js-issue-tracker/static/css/main.497fa89a.css",
+    "main.js": "/js-issue-tracker/static/js/main.e623294d.js",
     "static/js/787.2913b449.chunk.js": "/js-issue-tracker/static/js/787.2913b449.chunk.js",
     "static/media/boxicons.svg": "/js-issue-tracker/static/media/boxicons.9e2b21b135bc7d4c803f.svg",
     "static/media/boxicons.eot": "/js-issue-tracker/static/media/boxicons.65a8ce52fc5427e8f94d.eot",
@@ -9,12 +9,12 @@
     "static/media/boxicons.ttf": "/js-issue-tracker/static/media/boxicons.db9ddb1898dbd76badca.ttf",
     "static/media/boxicons.woff2": "/js-issue-tracker/static/media/boxicons.df635aaf04cd75132f62.woff2",
     "index.html": "/js-issue-tracker/index.html",
-    "main.e5f3d7fd.css.map": "/js-issue-tracker/static/css/main.e5f3d7fd.css.map",
-    "main.36301075.js.map": "/js-issue-tracker/static/js/main.36301075.js.map",
+    "main.497fa89a.css.map": "/js-issue-tracker/static/css/main.497fa89a.css.map",
+    "main.e623294d.js.map": "/js-issue-tracker/static/js/main.e623294d.js.map",
     "787.2913b449.chunk.js.map": "/js-issue-tracker/static/js/787.2913b449.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e5f3d7fd.css",
-    "static/js/main.36301075.js"
+    "static/css/main.497fa89a.css",
+    "static/js/main.e623294d.js"
   ]
 }
