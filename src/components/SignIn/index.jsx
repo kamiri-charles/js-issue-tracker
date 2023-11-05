@@ -12,27 +12,32 @@ const SignIn = () => {
     let [loading, setLoading] = useState(false);
 
     const sign_in = () => {
-      setLoading(true);
-      fetch('https://jit-api-a6d0d55add94.herokuapp.com/api/users/sign-in', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(userData),
-      })
-        .then((response) => response.json())
-        .then((data) => {
-          //localStorage.setItem('jit_user_data', JSON.parse(data));
-          console.log(typeof(data))
-          localStorage.setItem('jit_user_data', JSON.stringify(data));
-          console.log(localStorage.getItem('jit_user_data'));
-          setLoading(false);
-          nav('/dashboard');
+      /* If the fields are empty, display an error */
+      if (userData.username_or_email === '') {
+        setError('Please enter your username')
+      } else if (userData.password === '') {
+        setError('Please enter your password.');
+      } else {
+        setLoading(true);
+        fetch('https://jit-api-a6d0d55add94.herokuapp.com/api/users/sign-in', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(userData),
         })
-        .catch((error) => {
-          setError(error.message);
-          setLoading(false);
-        });
+          .then((response) => response.json())
+          .then((data) => {
+            localStorage.setItem('jit_user_data', JSON.stringify(data));
+            console.log(localStorage.getItem('jit_user_data'));
+            setLoading(false);
+            nav('/dashboard');
+          })
+          .catch((error) => {
+            setError(error.message);
+            setLoading(false);
+          });
+      }
     };
 
 
@@ -104,10 +109,6 @@ const SignIn = () => {
             Log In
           </button>
           )}
-
-          
-
-          
         </form>
       </div>
     );
