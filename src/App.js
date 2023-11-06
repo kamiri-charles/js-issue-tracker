@@ -7,19 +7,19 @@ import 'boxicons/css/boxicons.min.css';
 import './App.scss';
 
 function App() {
-  return (
-    <div className='App'>
-      <Router>
-        <Routes>
-          <Route path='' element={ <Navigate to='/dashboard' />}></Route>
-          <Route path='/dashboard' element={ <Dashboard />} />
-          <Route path='/profile' element={ <UserProfile />} />
-          <Route path='/settings' element={ <Settings />} />
-          <Route path='/sign-in' element={ <SignIn />} />
-        </Routes>
-      </Router>
-    </div>
-  );
-}
-
-export default App;
+	return (
+		<div className='App'>
+			<Router>
+				<Routes>
+					<Route path='' element={ <Navigate to='/dashboard' />}></Route>
+					<Route path='/dashboard' element={ <Dashboard />} />
+					<Route path='/profile' element={ <UserProfile />} />
+					<Route path='/settings' element={ <Settings />} />
+					<Route path='/sign-in' element={ <SignIn />} />
+				</Routes>
+			</Router>
+		</div>
+		);
+	}
+	
+	export default App;
