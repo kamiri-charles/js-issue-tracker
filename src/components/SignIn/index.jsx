@@ -32,7 +32,6 @@ const SignIn = () => {
           })
           .then(data => {
             localStorage.setItem('jit_user_data', JSON.stringify(data));
-            console.log(localStorage.getItem('jit_user_data'));
             setLoading(false);
             nav('/dashboard');
           })

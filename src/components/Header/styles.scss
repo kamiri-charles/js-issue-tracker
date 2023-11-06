@@ -5,32 +5,34 @@
     width: 100vw;
     height: 100px;
     background: var(--ui-black);
-
+    
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding-inline: 2%;
-
+    
     .left {
         text-align: center;
         font-family: 'Edu NSW ACT Foundation', cursive;
         font-size: 1.5rem;
         font-weight: 600;
         color: white;
-
+        cursor: pointer;
+        
         .group {
             font-size: 1rem;
         }
     }
-
+    
     .right {
         display: flex;
         align-items: center;
         justify-content: space-around;
         width: 40%;
         max-width: 250px;
-
+        
         .icon {
+            position: relative;
             display: grid;
             place-items: center;
             width: 35px;
@@ -39,10 +41,58 @@
             font-size: 25px;
             cursor: pointer;
             transition: all 0.3s ease-out;
-
-            &:hover {
+            
+            &:hover, &.active {
                 color: black;
                 background: var(--ui-white);
+            }
+        }
+        
+        .more {
+            .options {
+                position: absolute;
+                //top: 65px;
+                top: -120px;
+                left: -80px;
+                background: var(--ui-white);
+                color: var(--ui-black);
+                font-size: 20px;
+                width: 150px;
+                border-radius: 5px;
+                opacity: 0;
+                transition: all 0.3s ease;
+                
+                
+                .option {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    padding: 10px 20px;
+                    transition: all 0.5s ease;
+                    border-radius: 5px;
+                    margin: 2px;
+                    
+                    &:hover {
+                        background: var(--ui-secondary);
+                    }
+                    
+                    span {
+                        font-size: 18px;
+                    }
+                    
+                    .option-icon {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+            }
+
+            &.active {
+                .options {
+                    top: 65px;
+                    opacity: 1;
+                }
             }
         }
     }
