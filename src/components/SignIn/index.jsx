@@ -26,8 +26,11 @@ const SignIn = () => {
           },
           body: JSON.stringify(userData),
         })
-          .then((response) => response.json())
-          .then((data) => {
+          .then(res => {
+            if (res.ok) return res.json();
+            else throw new Error('Invalid username or password. Please check your credentials and try again.');
+          })
+          .then(data => {
             localStorage.setItem('jit_user_data', JSON.stringify(data));
             console.log(localStorage.getItem('jit_user_data'));
             setLoading(false);
@@ -65,9 +68,10 @@ const SignIn = () => {
               className={userData.username_or_email === '' ? '' : 'active'}
               type='text'
               value={userData.username_or_email}
-              onChange={(e) =>
-                setUserData({ ...userData, username_or_email: e.target.value })
-              }
+              onChange={(e) => {
+                setUserData({ ...userData, username_or_email: e.target.value });
+                setError('');
+              }}
               required
             />
           </label>
@@ -80,9 +84,10 @@ const SignIn = () => {
               className={userData.password === '' ? '' : 'active'}
               type={showPassword ? 'text' : 'password'}
               value={userData.password}
-              onChange={(e) =>
-                setUserData({ ...userData, password: e.target.value })
-              }
+              onChange={(e) => {
+                setUserData({ ...userData, password: e.target.value });
+                setError('');
+              }}
               required
             />
 
