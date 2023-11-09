@@ -3,6 +3,7 @@ import Dashboard from './components/Dashboard';
 import UserProfile from './components/UserProfile';
 import Settings from './components/Settings';
 import SignIn from './components/SignIn';
+import SignUp from './components/SignUp';
 import 'boxicons/css/boxicons.min.css';
 import './App.scss';
 
@@ -16,6 +17,7 @@ function App() {
 					<Route path='/profile' element={ <UserProfile />} />
 					<Route path='/settings' element={ <Settings />} />
 					<Route path='/sign-in' element={ <SignIn />} />
+					<Route path='/sign-up' element={ <SignUp />} />
 				</Routes>
 			</Router>
 		</div>
