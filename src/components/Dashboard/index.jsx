@@ -21,7 +21,45 @@ const Dashboard = () => {
     return (
         <div className='dashboard'>
             <Header />
-            Welcome, {userData?.username}!
+            
+            <div className="main">
+                <div className="user-meta-wrapper">
+                    <div className="user-img">
+                        <i className="bx bx-user"></i>
+                    </div>
+
+                   <div>Welcome, <span>{userData?.username}</span></div>
+
+
+                    <div className="user-meta">
+                        <h3>{userData?.first_name} {userData?.last_name}</h3>
+                        <p>{userData?.email}</p>
+                    </div>
+
+                    <div className="stats">
+                        <div className="stat">
+                            <i className="bx bx-star"></i>
+                            <div className="stat-title">Starred Packages</div>
+                            <div className="stat-value">0</div>
+                        </div>
+
+                        <div className="stat">
+                            <i className="bx bx-test-tube"></i>
+                            <div className="stat-title">Total Tests</div>
+                            <div className="stat-value">0</div>
+                        </div>
+
+                        <div className="stat">
+                            <i className="bx bx-check-circle"></i>
+                            <div className="stat-title">Issues Closed</div>
+                            <div className="stat-value">0</div>
+                        </div>
+                    </div>
+
+                </div>
+                <div className="packages-wrapper"></div>
+                <div className="test-wrapper"></div>
+            </div>
         </div>
     )
 };
