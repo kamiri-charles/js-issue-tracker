@@ -1,12 +1,13 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from '../Header';
+import { PackagesSlider } from './PackagesSlider';
 import './styles.scss';
 
 const Dashboard = () => {
 
     let nav = useNavigate();
-    let [userData, setUserData] = useState();
+    const [userData, setUserData] = useState();
 
     useEffect(() => {
         // Check if user is logged in
@@ -17,6 +18,7 @@ const Dashboard = () => {
             setUserData(JSON.parse(localStorage.getItem('jit_user_data')));
         }
     }, [nav]);
+
 
     return (
         <div className='dashboard'>
@@ -57,8 +59,15 @@ const Dashboard = () => {
                     </div>
 
                 </div>
-                <div className="packages-wrapper"></div>
-                <div className="test-wrapper"></div>
+                
+                <div className="packages-wrapper">
+                    <div className='wrapper-title'>Trending Packages</div>
+                    <PackagesSlider />
+                </div>
+
+                <div className="test-wrapper">
+                    Some content will go here...
+                </div>
             </div>
         </div>
     )

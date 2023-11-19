@@ -8,7 +8,7 @@
     color: white;
     padding: 20px;
     font-family: 'Edu NSW ACT Foundation', cursive;
-
+    
     .main {
         display: flex;
         flex-wrap: wrap;
@@ -16,7 +16,7 @@
         justify-content: space-around;
         width: 100%;
         height: calc(100% - 200px);
-
+        
         .user-meta-wrapper {
             display: flex;
             flex-direction: column;
@@ -27,7 +27,7 @@
             padding: 20px;
             font-size: 20px;
             position: relative;
-
+            
             .user-img {
                 position: absolute;
                 width: 80px;
@@ -41,15 +41,16 @@
                 top: 20px;
                 right: 20px;
             }
-
+            
             .stats {
                 display: flex;
                 align-items: center;
                 justify-content: space-around;
                 position: absolute;
+                left: 0;
                 bottom: 20px;
                 width: 100%;
-
+                
                 .stat {
                     display: grid;
                     place-items: center;
@@ -58,28 +59,146 @@
                     border-radius: 10px;
                     cursor: pointer;
                     
-
+                    
                     i {
                         font-size: 40px;
                     }
                 }
             }
-
+            
             
         }
-
+        
         .packages-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             background: var(--ui-black);
             width: 50%;
             height: 300px;
             border-radius: 10px;
+            padding: 20px;
+            
+            // Glassmorphism effect
+            background: rgba( 255, 255, 255, 0.25 );
+            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+            backdrop-filter: blur( 4px );
+            -webkit-backdrop-filter: blur( 4px );
+            border: 1px solid rgba( 255, 255, 255, 0.18 );
+            
+            
+            .wrapper-title {
+                position: absolute;
+                font-size: 25px;
+                margin-bottom: 20px;
+                top: 5px;
+                left: 50%;
+                transform: translateX(-50%);
+                text-decoration: underline;
+            }
+            
+            
+            .package {
+                position: relative;
+                background: transparent;
+                width: 100%;
+                height: 80%;
+                min-height: 250px;
+                padding: 30px;
+                border-radius: 10px;
+                margin-top: 30px;
+                
+                .package-name {
+                    font-size: 30px;
+                    margin-bottom: 20px;
+                    text-align: center;
+                }
+                
+                .actions {
+                    position: absolute;
+                    display: flex;
+                    bottom: 0;
+                    
+                    
+                    .action {
+                        width: 40px;
+                        height: 40px;
+                        display: grid;
+                        place-items: center;
+                        background: var(--ui-black);
+                        padding: 5px;
+                        border-radius: 50%;
+                        cursor: pointer;
+                        margin: 0 5px;
+                        transition: all 0.5s ease;
+                        
+                        i {
+                            font-size: 25px;
+                        }
+                        
+                        &:hover {
+                            background-color: var(--ui-primary);
+                        }
+                    }
+                }
+            }
         }
-
+        
         .test-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             background: var(--ui-black);
-            width: 40%;
-            height: 100px;
+            width: 80%;
+            height: 200px;
             border-radius: 10px;
+            color: white;
+            margin-top: 50px;
+        }
+    }
+}
+
+
+/* Mobile */
+@media screen and (max-width: 480px) {
+    .dashboard {
+        height: auto;
+        
+        .main {
+            flex-direction: column;
+
+            .user-meta-wrapper {
+                width: 95%;
+                margin-top: 150px;
+
+                .stats .stat .stat-title {
+                    display: none;
+                }
+
+                .stats .stat {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    width: 70px;
+                    height: 70px;
+                    padding: 10px;
+                    border-radius: 10px;
+                    font-size: 20px;
+                }
+            }
+
+
+            .packages-wrapper {
+                margin-top: 40px;
+                width: 95%;
+            }
+
+            .test-wrapper {
+                margin-top: 40px;
+                width: 95%;
+            }
         }
     }
 }
