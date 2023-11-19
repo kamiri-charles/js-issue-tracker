@@ -7,8 +7,7 @@ const SignUp = () => {
 
     const [userData, setUserData] = useState({
         username: '',
-        password_1: '',
-        password_2: '',
+        password: '',
         first_name: '',
         last_name: '',
         email: '',
@@ -63,8 +62,59 @@ const SignUp = () => {
         <form>
           <div className="form-title">Sign in to your account.</div>
           <label>
+            <span className={userData.first_name === "" ? "" : "active"}>
+              Provide your first name
+            </span>
+
+            <input
+              className={userData.first_name === "" ? "" : "active"}
+              type="text"
+              value={userData.first_name}
+              onChange={(e) => {
+                setUserData({ ...userData, first_name: e.target.value });
+                setError("");
+              }}
+              required
+            />
+          </label>
+
+          <label>
+            <span className={userData.last_name === "" ? "" : "active"}>
+              Provide your last name
+            </span>
+
+            <input
+              className={userData.last_name === "" ? "" : "active"}
+              type="text"
+              value={userData.last_name}
+              onChange={(e) => {
+                setUserData({ ...userData, last_name: e.target.value });
+                setError("");
+              }}
+              required
+            />
+          </label>
+
+          <label>
+            <span className={userData.email === "" ? "" : "active"}>
+              Enter your email
+            </span>
+
+            <input
+              className={userData.email === "" ? "" : "active"}
+              type="text"
+              value={userData.email}
+              onChange={(e) => {
+                setUserData({ ...userData, email: e.target.value });
+                setError("");
+              }}
+              required
+            />
+          </label>
+
+          <label>
             <span className={userData.username === "" ? "" : "active"}>
-              Username
+              Select a unique username
             </span>
 
             <input
@@ -117,7 +167,7 @@ const SignUp = () => {
                 sign_up();
               }}
             >
-              Log In
+              Create account
             </button>
           )}
         </form>

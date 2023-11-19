@@ -109,6 +109,32 @@
             cursor: pointer;
         }
     }
+
+    .other-sec {
+        position: absolute;
+        top: 50px;
+        right: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 98;
+
+        .sec-text {
+            color: white;
+            font-size: 16px;
+        }
+
+        button {
+            width: 120px;
+            padding: 10px;
+            background-color: var(--ui-white);
+            color: var(--ui-black);
+            border-radius: 5px;
+            margin-block: 20px;
+            cursor: pointer;
+        }
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -126,6 +152,18 @@
             width: 150px;
             padding-block: 20px;
         }
+    }
+
+    .other-sec {
+        position: relative;
+        width: 100%;
+        flex-direction: row;
+        top: 0;
+        left: 0;
+        justify-content: space-around;
+        background-color: var(--ui-black);
+
+        .sec-text {display: none;}
     }
   }
 }

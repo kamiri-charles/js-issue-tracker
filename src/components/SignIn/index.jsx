@@ -114,6 +114,11 @@ const SignIn = () => {
           </button>
           )}
         </form>
+
+        <div className="other-sec">
+          <div className='sec-text'>Don't have an account?</div>
+          <button onClick={() => nav('/sign-up')}>Get Started</button>
+        </div>
       </div>
     );
 };

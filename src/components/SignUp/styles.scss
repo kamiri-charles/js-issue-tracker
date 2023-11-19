@@ -1,0 +1,169 @@
+.sign-up {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+
+    .title {
+        position: absolute;
+        text-align: center;
+        top: 20px;
+        left: 40px;
+        font-family: 'Edu NSW ACT Foundation', cursive;
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: white;
+
+        .group {
+            font-size: 1rem;
+        }
+    }
+    
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        background: var(--ui-white);
+        padding: 20px;
+        width: 400px;
+        min-height: 500px;
+        margin-top: 100px;
+        z-index: 99;
+        
+        .form-title {
+            width: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid black;
+            margin-block: 20px;
+        }
+        
+        
+        label {
+            position: relative;
+            margin: 20px;
+            background: transparent;
+            width: 80%;
+            
+            span {
+                position: absolute;
+                top: 7px;
+                left: 12px;
+                font-size: 15px;
+                font-style: italic;
+                transition: all 0.3s ease;
+                
+                &.active {
+                    font-size: 13px;
+                    top: -20px;
+                    left: 0;
+                }
+            }
+            
+            input {
+                background: transparent;
+                padding: 10px;
+                width: 100%;
+                border-bottom: 1px solid black;
+                transition: all 0.3s ease-in;
+                
+                &.active {
+                    border: none;
+                    border-radius: 5px;
+                    background: var(--ui-primary);
+                    color: var(--ui-white)
+                }
+            }
+            
+            .show-password {
+                position: absolute;
+                top: 7px;
+                right: 12px;
+                font-size: 20px;
+                transition: all 0.3s ease-in;
+                cursor: pointer;
+            }
+            
+            // If input is active show password icon should be white
+            input.active ~ .show-password {
+                color: var(--ui-white);
+            }
+        }
+
+        .error {
+            color: red;
+            font-family: 'EDU NSW ACT Foundation', cursive;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        button {
+            width: 120px;
+            padding: 10px;
+            background-color: var(--ui-primary);
+            color: var(--ui-white);
+            border-radius: 5px;
+            margin-block: 20px;
+            cursor: pointer;
+        }
+    }
+
+    .other-sec {
+        position: absolute;
+        top: 50px;
+        right: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 98;
+
+        .sec-text {
+            color: white;
+            font-size: 16px;
+        }
+
+        button {
+            width: 120px;
+            padding: 10px;
+            background-color: var(--ui-white);
+            color: var(--ui-black);
+            border-radius: 5px;
+            margin-block: 20px;
+            cursor: pointer;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+  .sign-up {
+    .title {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    form {
+        width: 100vw;
+        height: 100vh;
+
+        button {
+            width: 150px;
+            padding-block: 20px;
+        }
+    }
+
+    .other-sec {
+        position: relative;
+        width: 100%;
+        flex-direction: row;
+        top: 0;
+        left: 0;
+        justify-content: space-around;
+        background-color: var(--ui-black);
+
+        .sec-text {display: none;}
+    }
+  }
+}
