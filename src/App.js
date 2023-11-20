@@ -2,6 +2,7 @@ import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
 import Dashboard from './components/Dashboard';
 import UserProfile from './components/UserProfile';
 import Settings from './components/Settings';
+import Packages from './components/Packages';
 import SignIn from './components/SignIn';
 import SignUp from './components/SignUp';
 import 'boxicons/css/boxicons.min.css';
@@ -16,6 +17,7 @@ function App() {
 					<Route path='/dashboard' element={ <Dashboard />} />
 					<Route path='/profile' element={ <UserProfile />} />
 					<Route path='/settings' element={ <Settings />} />
+					<Route path='/packages' element={ <Packages />} />
 					<Route path='/sign-in' element={ <SignIn />} />
 					<Route path='/sign-up' element={ <SignUp />} />
 				</Routes>

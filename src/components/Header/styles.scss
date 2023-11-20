@@ -29,8 +29,24 @@
         display: flex;
         align-items: center;
         justify-content: space-around;
-        width: 40%;
-        max-width: 250px;
+        min-width: 250px;
+
+        .searchbar {
+            width: 250px;
+
+            input {
+                width: 100%;
+                padding: 5px 10px;
+                font-family: 'Edu NSW ACT Foundation', cursive;
+                font-size: 1rem;
+                background: var(--ui-white);
+                border-radius: 5px;
+            }
+
+            @media screen and (max-width: 768px) {
+                display: none;
+            }
+        }
         
         .icon {
             position: relative;
@@ -42,6 +58,7 @@
             font-size: 25px;
             cursor: pointer;
             transition: all 0.3s ease-out;
+            margin-inline: 20px;
             
             &:hover, &.active {
                 color: black;
@@ -53,7 +70,7 @@
             .options {
                 position: absolute;
                 //top: 65px;
-                top: -120px;
+                top: -300px;
                 left: -80px;
                 background: var(--ui-white);
                 color: var(--ui-black);
@@ -68,6 +85,7 @@
                     display: flex;
                     align-items: center;
                     justify-content: space-around;
+                    text-align: center;
                     padding: 10px 20px;
                     transition: all 0.5s ease;
                     border-radius: 5px;

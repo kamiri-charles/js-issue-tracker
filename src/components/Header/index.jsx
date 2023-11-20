@@ -6,6 +6,7 @@ import './styles.scss';
 const Header = () => {
     let [options, setOptions] = useState(false);
     let [signingOut, setSigningOut] = useState(false);
+    let [searchText, setSearchText] = useState('');
     const nav = useNavigate();
 
     const sign_out = () => {
@@ -24,12 +25,22 @@ const Header = () => {
         </div>
 
         <div className="right">
-          <div className="notifications icon">
-            <i className="bx bx-bell"></i>
+
+          <div className='searchbar'>
+            <input
+              type="text" 
+              placeholder="Search for packages, libraries, issues, etc."
+              value={searchText}
+              onChange={(e) => setSearchText(e.target.value)}
+              />
+            </div>
+
+          <div className='search icon' onClick={() => nav('/packages')}>
+            <i className="bx bx-search"></i>
           </div>
 
-          <div className="user icon" onClick={() => nav("/profile")}>
-            <i className="bx bx-user"></i>
+          <div className="notifications icon">
+            <i className="bx bx-bell"></i>
           </div>
 
           <div
@@ -39,6 +50,21 @@ const Header = () => {
             <i className="bx bx-dots-vertical-rounded"></i>
 
             <div className="options" onClick={(e) => e.stopPropagation()}>
+
+              <div className="option" onClick={() => nav("/starred-packages")}>
+                <div className="option-icon">
+                  <i className="bx bx-star"></i>
+                </div>
+                <span>Packages</span>
+              </div>
+
+              <div className="option" onClick={() => nav("/profile")}>
+                <div className="option-icon">
+                  <i className="bx bx-user"></i>
+                </div>
+                <span>Profile</span>
+              </div>
+
               <div className="option" onClick={() => nav("/settings")}>
                 <div className="option-icon">
                   <i className="bx bx-cog"></i>
