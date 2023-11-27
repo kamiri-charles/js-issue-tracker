@@ -17,8 +17,6 @@ const PackageIssue = () => {
                 <a href="/create-issue">
                     <i className="bx bx-bug"></i>
                 </a>
-
-                
             </div>
         </div>
         <div className="discussion"></div>

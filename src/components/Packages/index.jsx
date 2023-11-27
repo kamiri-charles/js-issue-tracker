@@ -100,7 +100,7 @@ const Packages = () => {
                       description: pkg.package.description,
                       version: pkg.package.version,
                       author: pkg.package.author,
-                      user_id: localStorage.getItem('jit_user_data').id,
+                      user_id: JSON.parse(localStorage.getItem('jit_user_data')).id,
                       github_url: pkg.package.links.repository,
                       website_url: pkg.package.links.homepage
                     })}>
