@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { MetroSpinner } from 'react-spinners-kit';
 import './styles.scss';
@@ -16,6 +16,10 @@ const Header = () => {
         setTimeout(() => nav('/sign-in'), 3000);
     };
 
+    useEffect(() => {
+      setSearchText(localStorage.getItem('jit_search_text'));
+    }, []);
+
 
     return (
       <div className="header">
@@ -31,7 +35,13 @@ const Header = () => {
               type="text" 
               placeholder="Search for packages, libraries, issues, etc."
               value={searchText}
-              onChange={(e) => setSearchText(e.target.value)}
+              onChange={(e) => {
+                setSearchText(e.target.value);
+                localStorage.setItem('jit_search_text', e.target.value);
+                // Dispatch an event to update the packages list
+                const event = new Event('search_text_change');
+                document.dispatchEvent(event);
+              }}
               />
             </div>
 
