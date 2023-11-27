@@ -23,8 +23,8 @@ function App() {
 					<Route path='/packages' element={ <Packages />} />
 					<Route path='/sign-in' element={ <SignIn />} />
 					<Route path='/sign-up' element={ <SignUp />} />
-					<Route path='/:package-name' element={ <PackageInfo /> }></Route>
-					<Route path='/:package-name/issue/:issue-id' element={ <PackageIssue /> }></Route>
+					<Route path='/package' element={ <PackageInfo /> }></Route>
+					<Route path='/package/:package-name/issue/:issue-id' element={ <PackageIssue /> }></Route>
 				</Routes>
 			</Router>
 		</div>

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import Header from "../Header";
 import { MetroSpinner } from "react-spinners-kit";
 import "./styles.scss";
@@ -7,6 +8,7 @@ const Packages = () => {
   
   let [packagesData, setPackagesData] = useState([]);
   let [loading, setLoading] = useState(false);
+  let nav = useNavigate();
 
   const star_package = ({name, description, version, author, user_id, github_url, website_url}) => {
     fetch(
@@ -85,7 +87,7 @@ const Packages = () => {
                   style={{ width: getRandomWidth() }}
                   onClick={() => {
                     localStorage.setItem('jit_package_data', JSON.stringify(pkg));
-                    window.location.href = `/${pkg.package.name}}`;
+                    nav(`/package`)
                   }}
                 >
                   <div className="name">{pkg.package.name}</div>
