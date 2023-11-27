@@ -61,7 +61,7 @@ const Header = () => {
 
             <div className="options" onClick={(e) => e.stopPropagation()}>
 
-              <div className="option" onClick={() => nav("/starred-packages")}>
+              <div className="option" onClick={() => nav("/packages")}>
                 <div className="option-icon">
                   <i className="bx bx-star"></i>
                 </div>
