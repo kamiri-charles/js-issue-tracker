@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/js-issue-tracker/static/css/main.b1241e5c.css",
-    "main.js": "/js-issue-tracker/static/js/main.c283a7d0.js",
+    "main.js": "/js-issue-tracker/static/js/main.781fd990.js",
     "static/js/787.2913b449.chunk.js": "/js-issue-tracker/static/js/787.2913b449.chunk.js",
     "static/media/boxicons.svg": "/js-issue-tracker/static/media/boxicons.9e2b21b135bc7d4c803f.svg",
     "static/media/boxicons.eot": "/js-issue-tracker/static/media/boxicons.65a8ce52fc5427e8f94d.eot",
@@ -10,11 +10,11 @@
     "static/media/boxicons.woff2": "/js-issue-tracker/static/media/boxicons.df635aaf04cd75132f62.woff2",
     "index.html": "/js-issue-tracker/index.html",
     "main.b1241e5c.css.map": "/js-issue-tracker/static/css/main.b1241e5c.css.map",
-    "main.c283a7d0.js.map": "/js-issue-tracker/static/js/main.c283a7d0.js.map",
+    "main.781fd990.js.map": "/js-issue-tracker/static/js/main.781fd990.js.map",
     "787.2913b449.chunk.js.map": "/js-issue-tracker/static/js/787.2913b449.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b1241e5c.css",
-    "static/js/main.c283a7d0.js"
+    "static/js/main.781fd990.js"
   ]
 }
