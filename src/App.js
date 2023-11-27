@@ -3,6 +3,8 @@ import Dashboard from './components/Dashboard';
 import UserProfile from './components/UserProfile';
 import Settings from './components/Settings';
 import Packages from './components/Packages';
+import PackageInfo from './components/PackageInfo';
+import PackageIssue from './components/PackageIssue';
 import SignIn from './components/SignIn';
 import SignUp from './components/SignUp';
 import 'boxicons/css/boxicons.min.css';
@@ -21,6 +23,8 @@ function App() {
 					<Route path='/packages' element={ <Packages />} />
 					<Route path='/sign-in' element={ <SignIn />} />
 					<Route path='/sign-up' element={ <SignUp />} />
+					<Route path='/:package-name' element={ <PackageInfo /> }></Route>
+					<Route path='/:package-name/issue/:issue-id' element={ <PackageIssue /> }></Route>
 				</Routes>
 			</Router>
 		</div>

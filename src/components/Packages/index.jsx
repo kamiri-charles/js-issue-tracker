@@ -7,6 +7,23 @@ const Packages = () => {
   
   let [packagesData, setPackagesData] = useState([]);
   let [loading, setLoading] = useState(false);
+
+  const star_package = ({name, description, version, author, user_id, github_url, website_url}) => {
+    fetch(
+      "https://jit-api-a6d0d55add94.herokuapp.com/api/packages/star", {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({name, description, version, author, user_id, github_url, website_url}
+      )}
+    )
+    .then(res => res.json())
+    .then(data => {
+      console.log(data);
+    })
+  }
+
   
   
   useEffect(() => {
@@ -66,15 +83,27 @@ const Packages = () => {
                   className="package"
                   key={index}
                   style={{ width: getRandomWidth() }}
+                  onClick={() => {
+                    localStorage.setItem('jit_package_data', JSON.stringify(pkg));
+                    window.location.href = `/${pkg.package.name}}`;
+                  }}
                 >
                   <div className="name">{pkg.package.name}</div>
                   <div className="description">{pkg.package.description}</div>
                   <div className="version">{pkg.package.version}</div>
                   <div className="links">
 
-                    <a href="/starred">
+                    <div onClick={() => star_package({
+                      name: pkg.package.name,
+                      description: pkg.package.description,
+                      version: pkg.package.version,
+                      author: pkg.package.author,
+                      user_id: localStorage.getItem('jit_user_data').id,
+                      github_url: pkg.package.links.repository,
+                      website_url: pkg.package.links.homepage
+                    })}>
                       <i className="bx bx-star"></i>
-                    </a>
+                    </div>
 
                     <a href="/create-issue">
                       <i className="bx bx-bug"></i>
